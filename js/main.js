@@ -2,6 +2,10 @@
 import { getFormData } from './getFormData.js'
 import { addCommentToDom } from './addCommentToDom.js'
 import { countCharacters, textArea } from './countCharacters.js'
+import { shrinkMainLogo } from './shrinkMainLogo.js'
+import { updateFormValidationState } from './updateFormValidationState.js'
+import { checkFormIsValid } from './checkFormIsValid.js'
+import { setInvalidInputs } from './setInvalidInputs.js'
 
 const form = document.querySelector('form')
 let commentsCounter = 0
@@ -12,15 +16,20 @@ form.addEventListener('submit', (event) => {
   commentsCounter++
 
   const formData = getFormData()
-  const commentFlexItem = document.getElementById('main_flexbox__item2')
-  commentFlexItem.style.alignSelf = 'flex-start'
-  const commentImage = document.getElementById('comment_box__logo')
-  commentImage.style.width = '20%'
-  commentImage.style.alignSelf = 'center'
-  commentImage.style.padding = '0.5rem'
-  commentImage.style.margin = ' 0rem 40%'
+  updateFormValidationState(formData)
+  const formIsValid = checkFormIsValid()
+  console.log('formIsValid', formIsValid)
 
-  addCommentToDom(formData, commentsCounter)
+  if (!formIsValid) {
+    setInvalidInputs()
+  }
+
+  if (formIsValid) {
+    shrinkMainLogo()
+    addCommentToDom(formData, commentsCounter)
+    //TODO
+    //clear inputs
+  }
 })
 
 textArea.addEventListener('input', countCharacters)
