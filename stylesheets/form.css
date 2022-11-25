@@ -1,0 +1,89 @@
+.form_flexbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 100vh;
+}
+
+.form_flexbox__item {
+  width: 70%;
+  min-height: 60%;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: rgb(255, 255, 255, 1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form_comment_img {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+}
+
+.form__h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 1rem auto;
+  color: #0096f0;
+}
+
+.form_input__container {
+  margin: 1.5rem auto;
+  width: 100%;
+}
+
+.form_input__label {
+  position: relative;
+  display: inline-block;
+  color: black;
+  width: 10rem;
+  padding: 0.2rem 0.1rem;
+  font-weight: 700;
+}
+
+.form_input__text {
+  position: relative;
+  display: block;
+  border: none;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: #e5e9ed;
+}
+
+textarea {
+  resize: none;
+}
+
+.form_input__message {
+  position: relative;
+  display: block;
+  border: none;
+  width: 100%;
+  height: 9rem;
+  background: #e5e9ed;
+}
+
+.form__submit_button {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  height: 3rem;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  background: #0096f0;
+  border: none;
+}
+
+.form__char_count {
+  float: right;
+  padding: 0.35rem 0 0 0;
+  font-size: 0.9rem;
+}

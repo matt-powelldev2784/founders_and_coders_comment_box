@@ -11,29 +11,77 @@
       rel="stylesheet"
     />
     <link href="stylesheets/main.css" rel="stylesheet" />
-    <link href="stylesheets//header.css" rel="stylesheet" />
+    <link href="stylesheets/header.css" rel="stylesheet" />
+    <link href="stylesheets/form.css" rel="stylesheet" />
+    <link href="stylesheets/comment.css" rel="stylesheet" />
     <script type="module" src="./js/main.js"></script>
   </head>
 
   <body>
     <header class="header__container"></header>
-    <section class="main_flexbox__container">
+    <!--............................................-->
+    <!--............................................-->
+    <main class="main_flexbox__container">
       <div class="main__flexbox">
-        <article class="main_flexbox__item1">
-          <div class="main_flexbox__form">abkjddjkjkdkjdkj</div>
-        </article>
-        <article class="main_flexbox__item2">
+        <!--............................................-->
+        <!--............................................-->
+        <section class="main_flexbox__item1">
+          <div class="form_container">
+            <article class="form_flexbox">
+              <form class="form_flexbox__item" id="form">
+                <img
+                  class="form_comment_img"
+                  src="./img/comment.svg"
+                  alt="Comment Icon"
+                />
+                <h2 class="form__h2">LEAVE A COMMENT</h2>
+                <div class="form_input__container">
+                  <label class="form_input__label" for="name">NAME:</label>
+                  <input type="text" class="form_input__text" name="name" />
+                </div>
+                <div class="form_input__container">
+                  <label class="form_input__label" for="email">EMAIL:</label>
+                  <input type="text" class="form_input__text" name="email" />
+                </div>
+                <div class="form_input__container">
+                  <label class="form_input__label" for="message"
+                    >COMMENT:</label
+                  >
+                  <div class="form__char_count" id="form__char_count">
+                    0/140
+                  </div>
+                  <textarea
+                    class="form_input__message"
+                    name="message"
+                    id="message"
+                  ></textarea>
+                </div>
+
+                <input
+                  class="form__submit_button"
+                  type="submit"
+                  value="Submit"
+                />
+              </form>
+            </article>
+          </div>
+        </section>
+        <!--............................................-->
+        <!--............................................-->
+        <section class="main_flexbox__item2" id="main_flexbox__item2">
           <img
-            class="main_flexbox__comment_img"
-            src="./img/comment.svg"
+            class="comment_box__logo"
+            id="comment_box__logo"
+            src="./img/comment_box_logo2.svg"
             alt="Comment Icon"
           />
-        </article>
-      </div>
-    </section>
+          <h1 class="comment_box__h1">COMMENT</h1>
+          <h2 class="comment_box__h2">BOX</h2>
 
-    <!--............................................-->
-    <!--............................................-->
+          <div id="comments"></div>
+        </section>
+      </div>
+    </main>
 
     <!--............................................-->
     <!--............................................-->

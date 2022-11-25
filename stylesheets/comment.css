@@ -1,0 +1,23 @@
+.comments__container {
+  margin: 1rem;
+}
+
+.comment__header {
+  background: #0096f0;
+  color: white;
+  padding: 0.5rem;
+}
+
+.comment__name {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.comment__time {
+  font-weight: 700;
+  float: right;
+}
+
+.comment__text {
+  padding: 0.5rem;
+}
