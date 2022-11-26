@@ -17,7 +17,7 @@ export const formValidationState = [
   {
     inputName: 'comment',
     isValid: false,
-    errorMsg: 'Comment is a required field',
+    errorMsg: 'Comment must not be blank and must be under 140 characters',
     inputElement: form.elements[2],
     errorElement: document.getElementById('form__error_comment'),
   },
