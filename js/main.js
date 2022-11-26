@@ -6,7 +6,7 @@ import { shrinkMainLogo } from './shrinkMainLogo.js'
 import { updateFormValidationState } from './formValidation/formValidationState.js'
 import { checkFormIsValid } from './formValidation/checkFormIsValid.js'
 import { setInvalidInputs } from './formValidation/setInvalidInputs.js'
-import { resetInputBorders } from './formValidation/resetInputBorders.js'
+import { resetInputErrors } from './formValidation/resetInputErrors.js'
 import { clearInputFields } from './formValidation/clearInputFields.js'
 
 const form = document.querySelector('form')
@@ -15,7 +15,7 @@ let commentsCounter = 0
 form.addEventListener('submit', (event) => {
   event.preventDefault()
 
-  resetInputBorders()
+  resetInputErrors()
   const formData = getFormData()
   updateFormValidationState(formData)
   const formIsValid = checkFormIsValid()

@@ -1,42 +1,46 @@
 'use strict'
-export const formValidationState = {
-  domElements: {
-    nameDomElement: form.elements[0],
-    emailDomElement: form.elements[1],
-    commentDomElement: form.elements[2],
-  },
-  name: {
+export const formValidationState = [
+  {
+    inputName: 'name',
     isValid: false,
-    errorMsg: 'Name is a required Field',
+    errorMsg: 'Name is a required field',
+    inputElement: form.elements[0],
+    errorElement: document.getElementById('form__error_name'),
   },
-  email: {
+  {
+    inputName: 'email',
     isValid: false,
     errorMsg: 'Email address must be valid',
+    inputElement: form.elements[1],
+    errorElement: document.getElementById('form__error_email'),
   },
-  comment: {
+  {
+    inputName: 'comment',
     isValid: false,
-    errorMsg: 'Comment is a required Field',
+    errorMsg: 'Comment is a required field',
+    inputElement: form.elements[2],
+    errorElement: document.getElementById('form__error_comment'),
   },
-}
+]
 
 export const updateFormValidationState = (formData) => {
   const { name, email, comment } = formData
 
-  //reset form validation state
-  formValidationState.name.isValid = false
-  formValidationState.email.isValid = false
-  formValidationState.comment.isValid = false
+  //reset form validation state to default
+  formValidationState.forEach((input) => {
+    input.isValid = false
+  })
 
   if (name.length > 0) {
-    formValidationState.name.isValid = true
+    formValidationState[0].isValid = true
   }
 
   const validEmailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
   if (email.match(validEmailRegEx)) {
-    formValidationState.email.isValid = true
+    formValidationState[1].isValid = true
   }
 
   if (comment.length > 0 && comment.length <= 140) {
-    formValidationState.comment.isValid = true
+    formValidationState[2].isValid = true
   }
 }

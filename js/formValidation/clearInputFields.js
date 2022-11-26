@@ -2,10 +2,14 @@
 import { formValidationState } from './formValidationState.js'
 
 export const clearInputFields = () => {
-  const { nameDomElement, emailDomElement, commentDomElement } =
-    formValidationState.domElements
+  formValidationState.forEach((input) => {
+    input.inputElement.value = ''
+  })
 
-  nameDomElement.value = ''
-  emailDomElement.value = ''
-  commentDomElement.value = ''
+  // const { nameInput, emailInput, commentInput } =
+  //   formValidationState.inputElements
+
+  // nameInput.value = ''
+  // emailInput.value = ''
+  // commentInput.value = ''
 }

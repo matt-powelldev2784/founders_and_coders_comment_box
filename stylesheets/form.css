@@ -32,6 +32,7 @@
 }
 
 .form_input__container {
+  position: relative;
   margin: 1.5rem auto;
   width: 100%;
 }
@@ -40,9 +41,24 @@
   position: relative;
   display: inline-block;
   color: black;
-  width: 10rem;
   padding: 0.2rem 0.1rem;
   font-weight: 700;
+}
+
+.form_input__error {
+  position: absolute;
+  display: none;
+  top: 4.7rem;
+  width: 100%;
+  float: right;
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.form_text_area_error {
+  top: 10.6rem;
 }
 
 .form_input__text {
@@ -60,7 +76,7 @@ textarea {
   resize: none;
 }
 
-.form_input__message {
+.form_input_comment {
   position: relative;
   display: block;
   border: none;
