@@ -6,15 +6,14 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  overflow: visible;
-  outline: solid 1px red;
+  overflow: hidden;
+  /* outline: solid 1px red; */
 }
 
 body {
   position: relative;
   display: block;
   background: white;
-  /* background-image: linear-gradient(160deg, #1d457f 0%, #00abe1 100%); */
   min-width: 100vw;
   min-height: 100vh;
 }
@@ -29,14 +28,25 @@ body {
 .main__flexbox {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 992px) {
+  .main__flexbox {
+    flex-direction: column;
+  }
 }
 
 .main_flexbox__item1 {
   width: 45vw;
   height: 100vh;
+}
+@media only screen and (max-width: 992px) {
+  .main_flexbox__item1 {
+    width: 100vw;
+    height: 70vh;
+  }
 }
 
 .main_flexbox__item2 {
@@ -45,11 +55,23 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+@media only screen and (max-width: 992px) {
+  .main_flexbox__item2 {
+    width: 100vw;
+    height: 30vh;
+  }
+}
 
 .form_container {
   width: 45vw;
   height: 100vh;
   background: #0096f0;
+}
+@media only screen and (max-width: 992px) {
+  .form_container {
+    width: 100vw;
+    height: 70vh;
+  }
 }
 
 .comment_box__logo {
@@ -57,6 +79,14 @@ body {
   height: auto;
   max-height: 70vh;
   margin: 0 25%;
+}
+@media only screen and (max-width: 992px) {
+  .comment_box__logo {
+    display: none;
+    width: 10%;
+    height: auto;
+    margin: 0.25rem 45%;
+  }
 }
 
 .comment_box__h1 {
@@ -66,6 +96,13 @@ body {
   color: #232330;
   line-height: 3.2vw;
 }
+@media only screen and (max-width: 992px) {
+  .comment_box__h1 {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    padding: 0.5rem 0 0 0;
+  }
+}
 
 .comment_box__h2 {
   text-align: center;
@@ -73,4 +110,10 @@ body {
   font-weight: 900;
   color: #232330;
   line-height: 6.5vw;
+}
+@media only screen and (max-width: 992px) {
+  .comment_box__h2 {
+    font-size: 6vw;
+    line-height: 5.8vw;
+  }
 }

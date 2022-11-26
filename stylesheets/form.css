@@ -7,6 +7,12 @@
   width: 45vw;
   height: 100vh;
 }
+@media only screen and (max-width: 992px) {
+  .form_flexbox {
+    width: 100vw;
+    height: 70vh;
+  }
+}
 
 .form_flexbox__item {
   width: 70%;
@@ -30,27 +36,45 @@
   margin: 0rem auto;
   color: #0096f0;
 }
+@media only screen and (max-width: 992px) {
+  .form__h2 {
+    font-size: 1.2rem;
+  }
+}
 
 .form_input__container {
   position: relative;
   margin: 1.5rem auto;
-  width: 100%;
+  overflow-x: unset;
+  overflow-y: unset;
+}
+@media only screen and (max-width: 992px) {
+  .form_input__container {
+    margin: 0.25rem auto;
+  }
 }
 
 .form_input__label {
   position: relative;
   display: inline-block;
   color: black;
+  height: 1.5rem;
   padding: 0.2rem 0.1rem;
   font-weight: 700;
+  overflow-x: unset;
+  overflow-y: unset;
+}
+@media only screen and (max-width: 992px) {
+  .form_input__label {
+    font-size: 1rem;
+  }
 }
 
 .form_input__error {
   position: absolute;
-  display: none;
-  top: 4.7rem;
+  display: block;
+  top: 4.5rem;
   width: 100%;
-  float: right;
   color: red;
   font-size: 0.9rem;
   text-align: center;
@@ -60,9 +84,14 @@
 .form__error_p {
   display: block;
 }
+@media only screen and (max-width: 992px) {
+  .form__error_p {
+    display: none;
+  }
+}
 
 .form_text_area_error {
-  top: 10.6rem;
+  top: 10.5rem;
 }
 
 .form_input__text {
@@ -92,18 +121,21 @@ textarea {
 .form__submit_button {
   display: block;
   text-align: center;
-  margin: 3rem auto;
   height: 3rem;
   width: 100%;
+  margin: 3rem auto;
   font-size: 1.2rem;
   font-weight: 700;
   color: white;
   background: #0096f0;
   border: none;
 }
+@media only screen and (max-width: 992px) {
+  .form__submit_button {
+    margin: 1rem auto;
+  }
+}
 
 .form__char_count {
   float: right;
-  padding: 0.35rem 0 0 0;
-  font-size: 0.9rem;
 }

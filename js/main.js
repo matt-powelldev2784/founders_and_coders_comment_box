@@ -12,6 +12,8 @@ import { clearInputFields } from './formValidation/clearInputFields.js'
 const form = document.querySelector('form')
 let commentsCounter = 0
 
+console.log('window.innerWidth', window.innerWidth)
+
 form.addEventListener('submit', (event) => {
   event.preventDefault()
 
