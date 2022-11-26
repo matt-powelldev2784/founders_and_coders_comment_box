@@ -1,3 +1,5 @@
+'use strict'
+
 export let textArea = document.getElementById('message')
 let characterCounter = document.getElementById('form__char_count')
 

@@ -1,3 +1,4 @@
+'use strict'
 export const shrinkMainLogo = () => {
   const commentFlexItem = document.getElementById('main_flexbox__item2')
   commentFlexItem.style.alignSelf = 'flex-start'

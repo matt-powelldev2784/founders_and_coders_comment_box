@@ -1,9 +1,10 @@
-import { formValidationState } from './updateFormValidationState.js'
+'use strict'
+import { formValidationState } from './formValidationState.js'
 
 export const checkFormIsValid = () => {
   let isValid = true
   for (const field in formValidationState) {
-    if (formValidationState[field] === false) {
+    if (formValidationState[field].isValid === false) {
       isValid = false
     }
   }

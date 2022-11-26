@@ -1,11 +1,13 @@
 'use strict'
-import { getFormData } from './getFormData.js'
+import { getFormData } from './formValidation/getFormData.js'
 import { addCommentToDom } from './addCommentToDom.js'
-import { countCharacters, textArea } from './countCharacters.js'
+import { countCharacters, textArea } from './formValidation/countCharacters.js'
 import { shrinkMainLogo } from './shrinkMainLogo.js'
-import { updateFormValidationState } from './updateFormValidationState.js'
-import { checkFormIsValid } from './checkFormIsValid.js'
-import { setInvalidInputs } from './setInvalidInputs.js'
+import { updateFormValidationState } from './formValidation/formValidationState.js'
+import { checkFormIsValid } from './formValidation/checkFormIsValid.js'
+import { setInvalidInputs } from './formValidation/setInvalidInputs.js'
+import { resetInputBorders } from './formValidation/resetInputBorders.js'
+import { clearInputFields } from './formValidation/clearInputFields.js'
 
 const form = document.querySelector('form')
 let commentsCounter = 0
@@ -13,22 +15,20 @@ let commentsCounter = 0
 form.addEventListener('submit', (event) => {
   event.preventDefault()
 
-  commentsCounter++
-
+  resetInputBorders()
   const formData = getFormData()
   updateFormValidationState(formData)
   const formIsValid = checkFormIsValid()
-  console.log('formIsValid', formIsValid)
 
   if (!formIsValid) {
     setInvalidInputs()
   }
 
   if (formIsValid) {
+    commentsCounter++
     shrinkMainLogo()
     addCommentToDom(formData, commentsCounter)
-    //TODO
-    //clear inputs
+    clearInputFields()
   }
 })
 
