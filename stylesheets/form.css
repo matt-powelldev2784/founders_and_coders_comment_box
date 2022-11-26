@@ -12,7 +12,7 @@
   width: 70%;
   min-height: 60%;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: clamp(0.25rem, 2vw, 2rem);
   background: rgb(255, 255, 255, 1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -25,9 +25,9 @@
 
 .form__h2 {
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
   text-align: center;
-  margin: 1rem auto;
+  margin: 0rem auto;
   color: #0096f0;
 }
 
