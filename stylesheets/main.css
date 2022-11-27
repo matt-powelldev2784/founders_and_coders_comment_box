@@ -64,7 +64,7 @@ body {
 @media only screen and (max-width: 992px) {
   .main_flexbox__item2 {
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
   }
 }
 @media only screen and (max-width: 451px) {
