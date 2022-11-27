@@ -150,6 +150,7 @@ textarea {
   border: none;
   width: 100%;
   height: 9rem;
+  font-size: 1.2rem;
   background: #e5e9ed;
 }
 @media only screen and (max-width: 992px) {
