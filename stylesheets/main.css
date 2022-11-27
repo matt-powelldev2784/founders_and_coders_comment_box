@@ -59,6 +59,7 @@ body {
   width: 55vw;
   max-height: 100vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 @media only screen and (max-width: 992px) {
   .main_flexbox__item2 {
