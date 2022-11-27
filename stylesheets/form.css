@@ -6,7 +6,7 @@
   align-items: center;
   width: 45vw;
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 @media only screen and (max-width: 992px) {
   .form_flexbox {
@@ -36,6 +36,7 @@
 .form_flexbox__item {
   width: 70%;
   min-height: 30rem;
+  height: auto;
   border-radius: 1rem;
   padding: clamp(0.25rem, 2vw, 2rem);
   background: rgb(255, 255, 255, 1);
@@ -45,6 +46,11 @@
   .form_flexbox__item {
     width: 90%;
     min-height: 20rem;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .form_flexbox__item {
+    min-height: 24rem;
   }
 }
 

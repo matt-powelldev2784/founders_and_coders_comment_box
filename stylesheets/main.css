@@ -7,6 +7,8 @@
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+
   /* border: 1px solid red; */
 }
 
@@ -58,7 +60,7 @@ body {
 .main_flexbox__item2 {
   width: 55vw;
   max-height: 100vh;
-  overflow-y: auto;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 @media only screen and (max-width: 992px) {
@@ -70,7 +72,8 @@ body {
 @media only screen and (max-width: 451px) {
   .main_flexbox__item2 {
     width: 100vw;
-    height: 70vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
