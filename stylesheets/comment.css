@@ -1,6 +1,7 @@
 .comments__container {
   margin: 1rem;
 }
+
 @media only screen and (max-width: 451px) {
   .comments__container {
     width: 93vw;

@@ -6,8 +6,8 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   /* border: 1px solid red; */
 }
@@ -61,19 +61,19 @@ body {
   width: 55vw;
   max-height: 100vh;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 @media only screen and (max-width: 992px) {
   .main_flexbox__item2 {
     width: 100vw;
-    height: 40vh;
+    max-height: 40vh;
+    overflow-y: scroll;
   }
 }
 @media only screen and (max-width: 451px) {
   .main_flexbox__item2 {
     width: 100vw;
+    max-height: 40vh;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
   }
 }
 
