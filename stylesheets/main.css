@@ -6,7 +6,7 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* border: 1px solid red; */
 }
 
@@ -58,8 +58,6 @@ body {
 .main_flexbox__item2 {
   width: 55vw;
   max-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 @media only screen and (max-width: 992px) {
   .main_flexbox__item2 {
