@@ -13,6 +13,7 @@ const form = document.querySelector('form')
 let commentsCounter = 0
 
 console.log('window.innerWidth', window.innerWidth)
+console.log('window.innerHeight', window.innerHeight)
 
 form.addEventListener('submit', (event) => {
   event.preventDefault()
