@@ -10,6 +10,12 @@
 @media only screen and (max-width: 992px) {
   .form_flexbox {
     width: 100vw;
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 451px) {
+  .form_flexbox {
+    width: 100vw;
     height: 70vh;
   }
 }
@@ -22,11 +28,21 @@
   background: rgb(255, 255, 255, 1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+@media only screen and (max-width: 451px) {
+  .form_flexbox__item {
+    width: 90%;
+  }
+}
 
 .form_comment_img {
   width: 100%;
   height: 5rem;
   margin: 0 auto;
+}
+@media only screen and (max-width: 451px) {
+  .form_comment_img {
+    height: 3rem;
+  }
 }
 
 .form__h2 {
@@ -104,6 +120,11 @@
   font-size: 1.2rem;
   background: #e5e9ed;
 }
+@media only screen and (max-width: 451px) {
+  .form_input__text {
+    height: 1.5rem;
+  }
+}
 
 textarea {
   resize: none;
@@ -116,6 +137,16 @@ textarea {
   width: 100%;
   height: 9rem;
   background: #e5e9ed;
+}
+@media only screen and (max-width: 992px) {
+  .form_input_comment {
+    height: 5rem;
+  }
+}
+@media only screen and (max-width: 451px) {
+  .form_input_comment {
+    height: 3rem;
+  }
 }
 
 .form__submit_button {
@@ -133,6 +164,12 @@ textarea {
 @media only screen and (max-width: 992px) {
   .form__submit_button {
     margin: 1rem auto;
+  }
+}
+@media only screen and (max-width: 451px) {
+  .form__submit_button {
+    height: 1.7rem;
+    width: 6rem;
   }
 }
 
