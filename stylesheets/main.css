@@ -6,7 +6,7 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 body {
@@ -63,12 +63,19 @@ body {
 }
 
 .main_flexbox__item2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
   width: 55vw;
-  max-height: 100vh;
+  height: 100vh;
   overflow-y: scroll;
 }
 @media only screen and (max-width: 992px) {
   .main_flexbox__item2 {
+    align-items: flex-start;
     width: 100vw;
     max-height: 40vh;
     overflow-y: scroll;
@@ -106,9 +113,12 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
+  min-height: 100%;
 }
 @media only screen and (max-width: 992px) {
   .comment_box__logo_flexbox {
+    width: 100vw;
     flex-direction: row;
   }
 }

@@ -39,4 +39,8 @@ export const addCommentToDom = (formData, commentsCounter) => {
   const commentsBox = document.querySelector('#comments')
   const lastComment = commentsBox.firstChild
   commentsBox.insertBefore(comments, lastComment)
+
+  //set logo height to allow for comments
+  const commentLogoFlexBox = document.getElementById('comment_box__logo_flexbox')
+  commentLogoFlexBox.style.minHeight = 'unset'
 }

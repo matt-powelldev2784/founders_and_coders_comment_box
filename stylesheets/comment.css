@@ -1,12 +1,10 @@
 .comments__container {
-  margin: 1rem;
+  width: 100%;
 }
 
-@media only screen and (max-width: 451px) {
-  .comments__container {
-    width: 93vw;
-    margin: 0rem auto 0.5rem auto;
-  }
+.comments__container {
+  width: 95%;
+  margin: 0rem auto 0.5rem auto;
 }
 
 .comment__header {
